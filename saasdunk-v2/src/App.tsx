@@ -7,6 +7,7 @@ import { getAntComponent, getAntTheme, getColor } from "./config/themeHelper";
 import Dashboard from "./components/Dashboard/Dashboard";
 import { GlobalStyle } from "./config/global.config";
 import AppLayout from "./layout/AppLayout";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,7 +25,10 @@ function App() {
       >
         <GlobalStyle />
         <AppLayout>
-          <Dashboard />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            {/* <Route path="/marketing" element={< />} /> */}
+          </Routes>
         </AppLayout>
         {/* <Sider style={{ backgroundColor: AppThemeColors[theme].primary }}>
             Sider

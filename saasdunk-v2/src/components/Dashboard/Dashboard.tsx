@@ -177,11 +177,11 @@ const Dashboard = () => {
               </Space>
             </div>
             <div className="user-row-2">
-              <div className="user-row-2-col">
+              <div className="user-row-2-col-1">
                 <p>Target</p>
                 <span>$4000</span>
               </div>
-              <div className="user-row-2-col">
+              <div className="user-row-2-col-2">
                 <p>Last Month</p>
                 <span>$3200</span>
               </div>
@@ -189,7 +189,9 @@ const Dashboard = () => {
           </div>
           <div className="marketing-members">
             <p>Members</p>
-            <images.dashboard.memberChart />
+            <div className="marketing-graph">
+              <images.dashboard.memberChart />
+            </div>
             <div className="user-row-2">
               <div className="members-col">
                 <p>Users</p>

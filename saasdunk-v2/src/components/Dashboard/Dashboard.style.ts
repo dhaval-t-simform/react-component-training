@@ -184,6 +184,7 @@ const PageContentStyle = styled.div`
   .marketing-members {
     background-color: white;
     border-radius: 13px;
+    padding: 3rem 3rem 1rem;
   }
   .marketing-user {
     display: grid;
@@ -193,7 +194,6 @@ const PageContentStyle = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
     border-bottom: 1px solid #eaedf7;
   }
   .user-report {
@@ -203,7 +203,8 @@ const PageContentStyle = styled.div`
     width: 100%;
     margin-bottom: 2rem;
   }
-  .user-report p {
+  .user-report p,
+  .marketing-members p {
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 3rem;
@@ -222,32 +223,46 @@ const PageContentStyle = styled.div`
     justify-content: center;
   }
   .user-row-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 3rem;
-    gap: 3rem;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 3rem; */
+    gap: 7rem;
+    margin-top: 0.5rem;
   }
-  .user-row-2-col {
+
+  .user-row-2-col-1,
+  .user-row-2-col-2 {
     align-items: center;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
-  .user-row-2-col p {
+  .user-row-2-col-1 {
+    margin-left: 2rem;
+  }
+  .user-row-2-col-2 {
+    margin-right: 2rem;
+  }
+
+  .user-row-2-col-1 p,
+  .user-row-2-col-2 p {
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 2.8rem;
     letter-spacing: 0.1rem;
     color: #97a0c3;
   }
-  .user-row-2-col span {
+  .user-row-2-col-1 span,
+  .user-row-2-col-2 span {
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 3rem;
     letter-spacing: 0.1rem;
     color: #242f57;
   }
-  /* .marketing-members p {
-    padding: 3rem;
-  } */
 
   .members-col p {
     font-size: 1.8rem;
@@ -263,6 +278,34 @@ const PageContentStyle = styled.div`
     letter-spacing: 0.1rem;
     color: #242f57;
   }
+  .marketing-graph {
+    width: 100%;
+  }
 `;
 
 export default PageContentStyle;
+
+// .user-row-2-col {
+//   align-items: center;
+//   justify-content: center;
+//   display: flex;
+//   flex-direction: column;
+//   margin-left: 2rem;
+// }
+// .user-row-2-col p {
+//   font-size: 1.8rem;
+//   font-weight: 400;
+//   line-height: 2.8rem;
+//   letter-spacing: 0.1rem;
+//   color: #97a0c3;
+// }
+// .user-row-2-col span {
+//   font-size: 2.4rem;
+//   font-weight: 700;
+//   line-height: 3rem;
+//   letter-spacing: 0.1rem;
+//   color: #242f57;
+// } */
+// /* .marketing-members p {
+//   padding: 3rem;
+// }
