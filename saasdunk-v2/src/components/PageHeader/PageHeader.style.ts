@@ -4,10 +4,10 @@ const PageHeaderStyle = styled.div`
   .page-header {
     display: grid;
     grid-template-columns: 4fr 1fr;
-    height: 8.8rem;
+    /* height: 8.8rem; */
+    padding: 2rem 3rem;
     align-items: center;
     background-color: aqua;
-    padding: 0 3rem;
   }
   .search-notif {
     display: flex;
@@ -17,7 +17,7 @@ const PageHeaderStyle = styled.div`
   .search {
     max-width: 65rem;
     border-radius: 11px;
-    height: 4rem;
+    /* height: 4rem; */
   }
   .notif {
     width: 5rem;

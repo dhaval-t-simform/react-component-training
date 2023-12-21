@@ -8,6 +8,8 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import { GlobalStyle } from "./config/global.config";
 import AppLayout from "./layout/AppLayout";
 import { Route, Routes } from "react-router-dom";
+import Student from "./components/Student/Student";
+import Courses from "./components/Courses/Courses";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,7 +29,8 @@ function App() {
         <AppLayout>
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            {/* <Route path="/marketing" element={< />} /> */}
+            <Route path="/student" element={<Student />} />
+            <Route path="/courses" element={<Courses />} />
           </Routes>
         </AppLayout>
         {/* <Sider style={{ backgroundColor: AppThemeColors[theme].primary }}>

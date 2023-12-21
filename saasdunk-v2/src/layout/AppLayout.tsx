@@ -131,7 +131,7 @@ const AppLayout = ({ children }) => {
             openKeys={["main", "communication", "pages", "settings"]}
             style={{
               backgroundColor: "red",
-              height: "calc(100vh - 8.8rem)",
+              height: "100vh",
               fontWeight: "500",
               fontSize: "15px",
               borderWidth: 0,

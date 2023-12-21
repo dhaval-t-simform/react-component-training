@@ -10,16 +10,17 @@ const AppLayoutStyle = styled.div`
     background-color: #f9f9f9;
   }
   .saas-head {
-    padding: 3rem 1.5rem;
+    padding: 2rem 3rem;
     background-color: skyblue;
-    height: 8.8rem;
+    /* height: 8.8rem; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
   .saas-title {
     font-size: 2.2rem;
-    line-height: 2.63rem;
+    padding: 0.4rem;
+    line-height: 2.6rem;
     letter-spacing: 0.05rem;
     font-weight: 500;
   }
@@ -29,7 +30,7 @@ const AppLayoutStyle = styled.div`
   .sidebar-nav {
     flex: 1;
     background-color: yellow;
-    height: calc(100vh - 9rem);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

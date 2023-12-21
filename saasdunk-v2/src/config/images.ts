@@ -5,8 +5,15 @@ import icDecrease from "../assets/svg/icDecrease";
 import icIncrease from "../assets/svg/icIncrease";
 import marketing from "../assets/svg/marketing";
 import memberChart from "../assets/svg/memberChart";
+import studentListView from "../assets/svg/studentListView";
+import studentTileView from "../assets/svg/studentTileView";
 import totalVisitsGraph from "../assets/svg/totalVisitsGraph";
 import visitDuration from "../assets/svg/visitDuration";
+import student1 from "../assets/images/Student-1.png";
+import threeDots from "../assets/svg/threeDots";
+import filter from "../assets/svg/filter";
+import courseLogo1 from "../assets/images/Bitmap.png";
+import star from "../assets/svg/star";
 
 export const images = {
   dashboard: {
@@ -19,5 +26,16 @@ export const images = {
     marketing,
     downOutlined,
     memberChart,
+  },
+  student: {
+    studentTileView,
+    studentListView,
+    student1,
+    threeDots,
+  },
+  courses: {
+    filter,
+    courseLogo1,
+    star,
   },
 };

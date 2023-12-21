@@ -3,8 +3,9 @@ import styled from "styled-components";
 const PageContentStyle = styled.div`
   background-color: #f4f7fc;
   padding: 3rem;
-  max-height: calc(100vh - 8.8rem);
+  max-height: 100vh;
   max-width: calc(100vw - 23.4rem);
+  /* overflow-y: hidden; */
   .page-header {
     padding-bottom: 3rem;
   }
