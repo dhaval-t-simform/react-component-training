@@ -19,9 +19,15 @@ import signUpImage from "../assets/svg/signUpImage";
 import signUpFooter from "../assets/svg/signUpFooter";
 import signUpDots from "../assets/svg/signUpDots";
 import signUpOval from "../assets/svg/signupOval";
+import searchIcon from "../assets/svg/searchIcon";
+import notificationIcon from "../assets/svg/notificationIcon";
 
 export const images = {
   saasDunk,
+  header: {
+    searchIcon,
+    notificationIcon,
+  },
   signup: {
     signUpImage,
     signUpFooter,

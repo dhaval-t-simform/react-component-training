@@ -1,11 +1,7 @@
-import { Avatar, Dropdown, Input, MenuProps, Space } from "antd";
+import { Avatar, Dropdown, Input, MenuProps } from "antd";
 import PageHeaderStyle from "./PageHeader.style";
-import {
-  BellOutlined,
-  DownOutlined,
-  UserOutlined,
-  SearchOutlined,
-} from "@ant-design/icons";
+import { BellOutlined, DownOutlined, UserOutlined } from "@ant-design/icons";
+import { images } from "../../config/images";
 
 const PageHeader = () => {
   const items: MenuProps["items"] = [
@@ -29,24 +25,23 @@ const PageHeader = () => {
     <PageHeaderStyle>
       <div className="page-header">
         <div className="search-notif">
-          <Input className="search" />
-          <BellOutlined style={{ fontSize: "2.2rem" }} />
+          <Input className="search" prefix={<images.header.searchIcon />} />
+          {<images.header.notificationIcon />}
         </div>
         <div className="profile-info">
-          <Avatar size={34} icon={<UserOutlined />} />
+          <img src={images.student.student1} alt="User Image" />
           <Dropdown
             menu={{ items }}
             trigger={["click"]}
             className="profile-dropdown"
           >
             <a onClick={(e) => e.preventDefault()}>
-              <span className="profile-name">Dhaval Thakkar</span>
-              <DownOutlined style={{ fontSize: "1rem" }} />
+              <span className="profile-name">Kinanthi Ayani </span>
+              <images.dashboard.downOutlined />
             </a>
           </Dropdown>
         </div>
       </div>
-      <hr />
     </PageHeaderStyle>
   );
 };
