@@ -14,8 +14,20 @@ import threeDots from "../assets/svg/threeDots";
 import filter from "../assets/svg/filter";
 import courseLogo1 from "../assets/images/Bitmap.png";
 import star from "../assets/svg/star";
+import saasDunk from "../assets/svg/saasDunk";
+import signUpImage from "../assets/svg/signUpImage";
+import signUpFooter from "../assets/svg/signUpFooter";
+import signUpDots from "../assets/svg/signUpDots";
+import signUpOval from "../assets/svg/signupOval";
 
 export const images = {
+  saasDunk,
+  signup: {
+    signUpImage,
+    signUpFooter,
+    signUpDots,
+    signUpOval,
+  },
   dashboard: {
     realtimeGraph: RealtimeUsersGraph,
     icIncrease,

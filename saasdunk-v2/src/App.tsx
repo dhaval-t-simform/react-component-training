@@ -7,9 +7,11 @@ import { getAntComponent, getAntTheme, getColor } from "./config/themeHelper";
 import Dashboard from "./components/Dashboard/Dashboard";
 import { GlobalStyle } from "./config/global.config";
 import AppLayout from "./layout/AppLayout";
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import Student from "./components/Student/Student";
 import Courses from "./components/Courses/Courses";
+import SignUp from "./components/SignUp/SignUp";
+import SignIn from "./components/SignIn/SignIn";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,28 +28,21 @@ function App() {
         }}
       >
         <GlobalStyle />
-        <AppLayout>
-          <Routes>
+        <Routes>
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route
+            element={
+              <AppLayout>
+                <Outlet />
+              </AppLayout>
+            }
+          >
             <Route path="/" element={<Dashboard />} />
-            <Route path="/student" element={<Student />} />
-            <Route path="/courses" element={<Courses />} />
-          </Routes>
-        </AppLayout>
-        {/* <Sider style={{ backgroundColor: AppThemeColors[theme].primary }}>
-            Sider
-          </Sider>
-          <Layout>
-            <Header style={{ backgroundColor: AppThemeColors[theme].primary }}>
-              Header
-            </Header>
-            <Content style={{ backgroundColor: AppThemeColors[theme].primary }}>
-              Content
-            </Content>
-            <Footer style={{ backgroundColor: AppThemeColors[theme].primary }}>
-              Footer
-            </Footer>
-          </Layout> */}
-        {/* </Layout> */}
+            <Route path="student" element={<Student />} />
+            <Route path="courses" element={<Courses />} />
+          </Route>
+        </Routes>
       </ConfigProvider>
     </ThemeProvider>
   );

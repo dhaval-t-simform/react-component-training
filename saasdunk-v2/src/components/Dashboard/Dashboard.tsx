@@ -13,7 +13,7 @@ const Dashboard = () => {
     },
     {
       cardHeading: "Total Visits",
-      cardValue: "32.123",
+      cardValue: "32.12",
       cardPer: "+10.01",
       incdec: images.dashboard.icIncrease,
       graph: images.dashboard.totalVisitsGraph,

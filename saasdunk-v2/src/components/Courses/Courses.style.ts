@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const CoursesStyle = styled.div`
-  /* background-color: #f4f7fc; */
-  background-color: beige;
+  background-color: #f4f7fc;
+  /* background-color: beige; */
   padding: 3rem;
-  max-height: 100vh;
+  max-height: calc(100vh - 8rem);
   max-width: calc(100vw - 23.4rem);
   overflow-y: scroll;
   .page-head {
