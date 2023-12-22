@@ -21,9 +21,11 @@ import signUpDots from "../assets/svg/signUpDots";
 import signUpOval from "../assets/svg/signupOval";
 import searchIcon from "../assets/svg/searchIcon";
 import notificationIcon from "../assets/svg/notificationIcon";
+import saasDunkWhite from "../assets/svg/saasDunkWhite";
 
 export const images = {
   saasDunk,
+  saasDunkWhite,
   header: {
     searchIcon,
     notificationIcon,

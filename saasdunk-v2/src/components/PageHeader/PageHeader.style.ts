@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const PageHeaderStyle = styled.div`
   border-bottom: 1px solid #eceff8;
-  max-height: 40rem;
+  max-height: 8rem;
   .page-header {
     display: grid;
     grid-template-columns: 4fr 1fr;

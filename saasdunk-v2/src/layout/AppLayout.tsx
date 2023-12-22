@@ -1,74 +1,12 @@
-import { Layout, Menu, Space } from "antd";
-import {
-  BarChartOutlined,
-  ShopOutlined,
-  TeamOutlined,
-  RedditOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
-
+import { Layout, Menu } from "antd";
 import type { MenuProps } from "antd";
 import { useState } from "react";
 import Header from "../components/PageHeader/PageHeader";
 import AppLayoutStyle from "./AppLayout.style";
-
+import { images } from "../config/images";
 const { Sider } = Layout;
 const AppLayout = ({ children }) => {
-  type MenuItem = Required<MenuProps>["items"][number];
-  function getItem(
-    label: React.ReactNode,
-    key: React.Key,
-    icon?: React.ReactNode,
-    children?: MenuItem[],
-    type?: "group"
-  ): MenuItem {
-    return {
-      key,
-      icon,
-      children,
-      label,
-      type,
-    } as MenuItem;
-  }
-
   const [collapsed, setCollapsed] = useState(false);
-  const items: MenuProps["items"] = [
-    getItem(
-      "MAIN",
-      "grp",
-      null,
-      [
-        getItem("Dashboard", "1", <BarChartOutlined />),
-        getItem("Contact 1", "2", <BarChartOutlined />),
-        getItem("Contact 2", "3", <BarChartOutlined />),
-      ],
-      "group"
-    ),
-    getItem(
-      "COMMUNICATION",
-      "grp",
-      null,
-      [
-        getItem("Chat 1", "4", <BarChartOutlined />),
-        getItem("Chat 2", "5", <BarChartOutlined />),
-      ],
-      "group"
-    ),
-    getItem(
-      "PAGES",
-      "grp",
-      null,
-      [
-        getItem("File", "6", <BarChartOutlined />),
-        getItem("Calendar", "7", <BarChartOutlined />),
-        getItem("Pricing", "8", <BarChartOutlined />),
-        getItem("Invoice 1", "9", <BarChartOutlined />),
-        getItem("Invoice 2", "10", <BarChartOutlined />),
-      ],
-      "group"
-    ),
-    getItem("Settings", "1", <BarChartOutlined />),
-  ];
 
   const demoItems: MenuProps["items"] = [
     {
@@ -104,23 +42,21 @@ const AppLayout = ({ children }) => {
 
   return (
     <AppLayoutStyle>
-      <Layout
-        hasSider
-        className="layout"
-        // style={{ margin: "0", minHeight: "100vh" }}
-      >
+      <Layout hasSider>
         <Sider
           // collapsible
-          width={"23.4rem"}
+          width={"26rem"}
           // collapsed={collapsed}
           // onCollapse={(value) => setCollapsed(value)}
           className="sidebar"
+          style={{ backgroundColor: "pink" }}
         >
           <div className="saas-head">
-            <RedditOutlined style={{ fontSize: "2rem" }} />
-            <span className="saas-title">Saas Dunk</span>
+            <images.saasDunkWhite />
+            <p>
+              <span>Saas</span>dunk.
+            </p>
           </div>
-          <hr className="hr" />
 
           <Menu
             theme="dark"
@@ -151,7 +87,3 @@ const AppLayout = ({ children }) => {
   );
 };
 export default AppLayout;
-
-{
-  /* </Space> */
-}
