@@ -14,7 +14,7 @@ const SignUpStyle = styled.div`
   }
   .left-container {
     width: 55%;
-    margin-top: 20rem;
+    /* margin-top: 20rem; */
   }
   .left-head {
     display: flex;
@@ -81,27 +81,23 @@ const SignUpStyle = styled.div`
     letter-spacing: 0.1rem;
     margin-bottom: 1.5rem;
   }
-  .tnc,
+
   .left-foot {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 66.66%;
     color: #242f57;
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.8rem;
     letter-spacing: 0.1rem;
-    margin-bottom: 10rem;
+    height: 12rem;
   }
-  .left-foot {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .tnc span,
+
   .left-foot span {
     color: #369afe;
-  }
-  .left-foot span {
-    margin-left: 0.5rem;
   }
   .signin-right {
     width: 56%;

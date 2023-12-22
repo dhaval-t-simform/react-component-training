@@ -54,14 +54,16 @@ const SignUp = () => {
             </Form.Item>
           </Form>
 
-          <p className="tnc">
-            By clicking Sign Up, you agree to our <span>Terms</span>,{" "}
-            <span>Data Policy</span> and <span>Cookie Policy</span>.
-          </p>
+          <div className="left-foot">
+            <p className="tnc">
+              By clicking Sign Up, you agree to our <span>Terms</span>,
+              <span>Data Policy</span> and <span>Cookie Policy</span>.
+            </p>
 
-          <p className="left-foot">
-            Already have account? <span>Sign In</span>.
-          </p>
+            <p className="login">
+              Already have account? <span>Sign In</span>.
+            </p>
+          </div>
         </div>
       </div>
       <div className="signin-right">

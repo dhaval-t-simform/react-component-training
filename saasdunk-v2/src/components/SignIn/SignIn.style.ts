@@ -101,15 +101,11 @@ const SignInStyle = styled.div`
   .left-foot span {
     color: #369afe;
   }
-  .left-foot .forgot {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-  }
+  .left-foot .forgot,
   .left-foot .register {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
   }
   .left-foot .register span {
     margin-left: 0.5rem;
