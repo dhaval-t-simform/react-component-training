@@ -1,82 +1,9 @@
 import StudentStyle from "./Student.style";
 import { images } from "../../config/images";
+import { studentData } from "../../dummyData";
+import StudentCard from "../StudentCard/StudentCard";
 
 const Student = () => {
-  const studentData = [
-    {
-      studentId: "student-1",
-      studentImage: images.student.student1,
-      studentName: "Albert Mustang",
-      studentEmail: "albertmustangggg@mail.com",
-    },
-    {
-      studentId: "student-2",
-      studentImage: images.student.student1,
-      studentName: "Albert Mustang",
-      studentEmail: "albertmustangggg@mail.com",
-    },
-    {
-      studentId: "student-3",
-      studentImage: images.student.student1,
-      studentName: "Albert Mustang",
-      studentEmail: "albertmustangggg@mail.com",
-    },
-    {
-      studentId: "student-4",
-      studentImage: images.student.student1,
-      studentName: "Albert Mustang",
-      studentEmail: "albertmustangggg@mail.com",
-    },
-    {
-      studentId: "student-5",
-      studentImage: images.student.student1,
-      studentName: "Albert Mustang",
-      studentEmail: "albertmustangggg@mail.com",
-    },
-    {
-      studentId: "student-6",
-      studentImage: images.student.student1,
-      studentName: "Albert Mustang",
-      studentEmail: "albertmustangggg@mail.com",
-    },
-    {
-      studentId: "student-7",
-      studentImage: images.student.student1,
-      studentName: "Albert Mustang",
-      studentEmail: "albertmustangggg@mail.com",
-    },
-    {
-      studentId: "student-8",
-      studentImage: images.student.student1,
-      studentName: "Albert Mustang",
-      studentEmail: "albertmustangggg@mail.com",
-    },
-    {
-      studentId: "student-9",
-      studentImage: images.student.student1,
-      studentName: "Albert Mustang",
-      studentEmail: "albertmustangggg@mail.com",
-    },
-    {
-      studentId: "student-10",
-      studentImage: images.student.student1,
-      studentName: "Albert Mustang",
-      studentEmail: "albertmustangggg@mail.com",
-    },
-    {
-      studentId: "student-11",
-      studentImage: images.student.student1,
-      studentName: "Albert Mustang",
-      studentEmail: "albertmustangggg@mail.com",
-    },
-    {
-      studentId: "student-12",
-      studentImage: images.student.student1,
-      studentName: "Albert Mustang",
-      studentEmail: "albertmustangggg@mail.com",
-    },
-  ];
-
   return (
     <StudentStyle>
       <div className="page-head">
@@ -98,13 +25,7 @@ const Student = () => {
       </div>
       <div className="student-card-container">
         {studentData.map((data) => (
-          <div className="student-card" key={data.studentId}>
-            <img src={data.studentImage} alt={data.studentName} />
-            <p className="student-name">{data.studentName}</p>
-            <p className="student-email">{data.studentEmail}</p>
-            <button>View Profile</button>
-            {<images.student.threeDots />}
-          </div>
+          <StudentCard data={data} />
         ))}
       </div>
     </StudentStyle>

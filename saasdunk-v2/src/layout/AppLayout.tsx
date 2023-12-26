@@ -1,43 +1,97 @@
-import { Layout, Menu } from "antd";
+import { Layout } from "antd";
 import type { MenuProps } from "antd";
-import { useState } from "react";
+// import { useState } from "react";
 import Header from "../components/PageHeader/PageHeader";
 import AppLayoutStyle from "./AppLayout.style";
 import { images } from "../config/images";
+import Menu from "./Menu.style";
+import { useNavigate } from "react-router-dom";
 const { Sider } = Layout;
 const AppLayout = ({ children }) => {
-  const [collapsed, setCollapsed] = useState(false);
-
+  const key = location.pathname.substring(1, location.pathname.length);
+  // const [collapsed, setCollapsed] = useState(false);
+  const navigate = useNavigate();
   const demoItems: MenuProps["items"] = [
     {
       label: "Main",
       key: "main",
       children: [
-        { label: "Dashboard", key: "dashboard", icon: "" },
-        { label: "Contact 1", key: "contact-1", icon: "" },
-        { label: "Contact 2", key: "contact-2", icon: "" },
+        {
+          label: "Dashboard",
+          key: "dashboard",
+          icon: <images.sidebar.dashboardIconWhite />,
+        },
+        {
+          label: "Students",
+          key: "students",
+          icon: <images.sidebar.usersIconWhite />,
+        },
+        {
+          label: "Courses",
+          key: "courses",
+          icon: <images.sidebar.boardIconWhite />,
+        },
       ],
     },
     {
       label: "Communication",
       key: "communication",
       children: [
-        { label: "Chat 1", key: "chat-1", icon: "" },
-        { label: "Chat 2", key: "chat-2", icon: "" },
+        {
+          label: "Sign In",
+          key: "sign-in",
+          icon: <images.sidebar.inboxIconWhite />,
+        },
+        {
+          label: "Sign Up",
+          key: "sign-up",
+          icon: <images.sidebar.chatIconWhite />,
+        },
       ],
     },
     {
       label: "Pages",
       key: "pages",
       children: [
-        { label: "File", key: "file", icon: "" },
-        { label: "Calendar", key: "calendar", icon: "" },
-        { label: "Pricing", key: "pricing", icon: "" },
-        { label: "Invoice 1", key: "invoice-1", icon: "" },
-        { label: "Invoice 2", key: "invoice-2", icon: "" },
+        {
+          label: "File Manager",
+          key: "file-manager",
+          icon: <images.sidebar.fileManagerWhite />,
+          disabled: true,
+        },
+        {
+          label: "Calender",
+          key: "calendar",
+          icon: <images.sidebar.calendarIconWhite />,
+          disabled: true,
+        },
+        {
+          label: "Pricing",
+          key: "pricing",
+          icon: <images.sidebar.pricingIconWhite />,
+          disabled: true,
+        },
+        {
+          label: "Invoice",
+          key: "invoice",
+          icon: <images.sidebar.invoiceIconWhite />,
+          disabled: true,
+        },
+        {
+          label: "Documentation",
+          key: "documentation",
+          icon: <images.sidebar.documentationIconWhite />,
+          disabled: true,
+        },
       ],
     },
-    { label: "Settings", key: "settings", icon: "" },
+    {
+      label: "Settings",
+      key: "settings",
+      icon: <images.sidebar.settingsIconWhite />,
+      className: "settings",
+      disabled: true,
+    },
   ];
 
   return (
@@ -49,7 +103,6 @@ const AppLayout = ({ children }) => {
           // collapsed={collapsed}
           // onCollapse={(value) => setCollapsed(value)}
           className="sidebar"
-          style={{ backgroundColor: "pink" }}
         >
           <div className="saas-head">
             <images.saasDunkWhite />
@@ -59,19 +112,16 @@ const AppLayout = ({ children }) => {
           </div>
 
           <Menu
-            theme="dark"
-            mode="inline"
-            defaultSelectedKeys={["4"]}
-            items={demoItems}
-            expandIcon={null}
-            openKeys={["main", "communication", "pages", "settings"]}
-            style={{
-              backgroundColor: "red",
-              height: "100vh",
-              fontWeight: "500",
-              fontSize: "15px",
-              borderWidth: 0,
+            // theme="dark"
+            // className=""
+            onClick={(e) => {
+              navigate(e.key);
             }}
+            expandIcon={null}
+            mode="inline"
+            selectedKeys={[key]}
+            items={demoItems}
+            openKeys={["main", "communication", "pages", "settings"]}
           />
         </Sider>
 

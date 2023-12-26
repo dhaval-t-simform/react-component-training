@@ -6,7 +6,7 @@ const SignInStyle = styled.div`
   /* grid-template-columns: 1fr 1.6fr; */
   .signin-left {
     width: 44%;
-    background-color: white;
+    background-color: ${(props) => props.theme.white};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,27 +27,23 @@ const SignInStyle = styled.div`
     letter-spacing: 0.1rem;
     text-align: center;
     font-weight: 500;
-    color: #0080ff;
+    color: ${(props) => props.theme.primary};
     margin-left: 1rem;
   }
   .left-head p span {
     font-weight: 800;
   }
   .left-container h2 {
-    color: #242f57;
+    color: ${(props) => props.theme.grayText100};
     font-size: 2.8rem;
     font-weight: 700;
     line-height: 4rem;
     letter-spacing: 0.1rem;
     margin-bottom: 3rem;
   }
-  .form-wrapper {
-    /* background-color: black; */
-  }
   .form-wrapper .ant-form-item {
     margin-bottom: 1.5rem;
   }
-
   .form-wrapper .ant-form-item .ant-form-item-label {
     padding-bottom: 1.5rem;
   }
@@ -56,11 +52,11 @@ const SignInStyle = styled.div`
     font-weight: 700;
     line-height: 1.5rem;
     letter-spacing: 0.15rem;
-    color: #97a0c3;
+    color: ${(props) => props.theme.grayText70};
   }
   .form-wrapper input {
-    border: 0.5px solid #97a0c3;
-    background-color: #fafcfe;
+    border: 0.5px solid ${(props) => props.theme.grayText70};
+    background-color: ${(props) => props.theme.inputBg};
     border-radius: 11px;
     height: 4rem;
   }
@@ -71,15 +67,15 @@ const SignInStyle = styled.div`
     margin-bottom: 2rem;
   }
   .form-wrapper .ant-form-item:nth-child(3) .ant-checkbox + span {
-    color: #242f57;
+    color: ${(props) => props.theme.grayText100};
   }
   .form-wrapper .ant-form-item button {
-    color: white;
+    color: ${(props) => props.theme.white};
     width: 100%;
     height: 5rem;
     border-radius: 11px;
     border: none;
-    background-color: #369afe;
+    background-color: ${(props) => props.theme.blueBg100};
     font-size: 1.8rem;
     font-weight: 500;
     letter-spacing: 0.1rem;
@@ -92,14 +88,14 @@ const SignInStyle = styled.div`
     justify-content: space-between;
     height: 12rem;
     width: 66.66%;
-    color: #242f57;
+    color: ${(props) => props.theme.grayText100};
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.8rem;
     letter-spacing: 0.1rem;
   }
   .left-foot span {
-    color: #369afe;
+    color: ${(props) => props.theme.blueBg100};
   }
   .left-foot .forgot,
   .left-foot .register {
@@ -112,7 +108,7 @@ const SignInStyle = styled.div`
   }
   .signin-right {
     width: 56%;
-    background-color: #0080ff;
+    background-color: ${(props) => props.theme.primary};
     z-index: -2;
     position: relative;
   }
@@ -124,7 +120,7 @@ const SignInStyle = styled.div`
     width: 34rem;
     height: 33rem;
     border-radius: 0px 50px;
-    border: 1px solid #2291ff;
+    border: 1px solid ${(props) => props.theme.blueBorder80};
     z-index: -1;
   }
   .signin-right:after {
@@ -135,7 +131,7 @@ const SignInStyle = styled.div`
     width: 60rem;
     height: 53rem;
     border-radius: 0px 50px;
-    border: 1px solid #2291ff;
+    border: 1px solid ${(props) => props.theme.blueBorder80};
     z-index: -1;
   }
 
@@ -191,7 +187,7 @@ const SignInStyle = styled.div`
     padding-top: 1em;
   }
   .right-info h3 {
-    color: #fff;
+    color: ${(props) => props.theme.white};
     text-align: center;
     font-size: 2.8rem;
     font-weight: 700;
@@ -200,7 +196,7 @@ const SignInStyle = styled.div`
     margin-bottom: 1rem;
   }
   .right-info p {
-    color: #fff;
+    color: ${(props) => props.theme.white};
     text-align: center;
     font-size: 1.4rem;
     font-weight: 400;

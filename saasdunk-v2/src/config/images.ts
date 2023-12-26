@@ -22,6 +22,22 @@ import signUpOval from "../assets/svg/signupOval";
 import searchIcon from "../assets/svg/searchIcon";
 import notificationIcon from "../assets/svg/notificationIcon";
 import saasDunkWhite from "../assets/svg/saasDunkWhite";
+import dashboardIconBlue from "../assets/svg/dashboardIconBlue";
+import chatIconBlue from "../assets/svg/chatIconBlue";
+import contactIconBlue from "../assets/svg/contactIconBlue";
+import fileIconBlue from "../assets/svg/fileIconBlue";
+import calendarIconBlue from "../assets/svg/calendarIconBlue";
+import dashboardIconWhite from "../assets/svg/dashboardIconWhite";
+import usersIconWhite from "../assets/svg/usersIconWhite";
+import boardIconWhite from "../assets/svg/boardIconWhite";
+import inboxIconWhite from "../assets/svg/inboxIconWhite";
+import chatIconWhite from "../assets/svg/chatIconWhite";
+import fileManagerWhite from "../assets/svg/fileManagerWhite";
+import calendarIconWhite from "../assets/svg/calendarIconWhite";
+import pricingIconWhite from "../assets/svg/pricingIconWhite";
+import invoiceIconWhite from "../assets/svg/invoiceIconWhite";
+import documentationIconWhite from "../assets/svg/documentationIconWhite";
+import settingsIconWhite from "../assets/svg/settingsIconWhite";
 
 export const images = {
   saasDunk,
@@ -29,6 +45,24 @@ export const images = {
   header: {
     searchIcon,
     notificationIcon,
+  },
+  sidebar: {
+    dashboardIconWhite,
+    usersIconWhite,
+    boardIconWhite,
+    inboxIconWhite,
+    chatIconWhite,
+    fileManagerWhite,
+    calendarIconWhite,
+    pricingIconWhite,
+    invoiceIconWhite,
+    documentationIconWhite,
+    settingsIconWhite,
+    dashboardIconBlue,
+    chatIconBlue,
+    contactIconBlue,
+    fileIconBlue,
+    calendarIconBlue,
   },
   signup: {
     signUpImage,

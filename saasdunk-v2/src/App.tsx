@@ -29,8 +29,8 @@ function App() {
       >
         <GlobalStyle />
         <Routes>
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/signin" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/sign-in" element={<SignIn />} />
           <Route
             element={
               <AppLayout>
@@ -39,7 +39,8 @@ function App() {
             }
           >
             <Route path="/" element={<Dashboard />} />
-            <Route path="student" element={<Student />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="students" element={<Student />} />
             <Route path="courses" element={<Courses />} />
           </Route>
         </Routes>

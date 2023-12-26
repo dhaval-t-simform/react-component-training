@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
 const StudentStyle = styled.div`
-  background-color: #f4f7fc;
-  /* background-color: beige; */
-  /* overflow-y: hidden; */
+  background-color: ${(props) => props.theme.contentBg};
   padding: 3rem;
   max-height: calc(100vh - 8rem);
   max-width: calc(100vw - 23.4rem);
@@ -30,9 +28,9 @@ const StudentStyle = styled.div`
     justify-content: center;
     width: 3rem;
     height: 2rem;
-    background-color: #369afe;
+    background-color: ${(props) => props.theme.blueBg100};
     border-radius: 15px;
-    color: white;
+    color: ${(props) => props.theme.white};
     margin: auto;
     font-size: 1.2rem;
     font-weight: 700;
@@ -45,7 +43,7 @@ const StudentStyle = styled.div`
   .toggle-view {
     width: 8rem;
     height: 4rem;
-    border: 1px solid #d2d5e1;
+    border: 1px solid ${(props) => props.theme.grayBorder30};
     border-radius: 9px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -53,9 +51,9 @@ const StudentStyle = styled.div`
     /* background-color: inherit; */
   }
   .selected-view {
-    border: 1px solid #eaedf7;
+    border: 1px solid ${(props) => props.theme.whiteBorder30};
     border-radius: 9px;
-    background-color: white !important;
+    background-color: ${(props) => props.theme.white} !important;
     overflow: hidden;
     box-shadow: 0px 2px 4px 0px #1c295a;
   }
@@ -67,7 +65,7 @@ const StudentStyle = styled.div`
   .something {
     width: 21rem;
     height: 4rem;
-    background-color: #369afe;
+    background-color: ${(props) => props.theme.blueBg100};
     border-radius: 9px;
   }
   .student-card-container {
@@ -75,43 +73,6 @@ const StudentStyle = styled.div`
     grid-template-columns: repeat(4, 1fr);
     /* row-gap: 3rem; */
     gap: 3rem;
-  }
-  .student-card {
-    position: relative;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 2.5rem 3rem;
-    /* width: 90%; */
-    border-radius: 11px;
-    box-shadow: 0px 2px 4px 0px rgba(28, 41, 90, 0.04);
-  }
-  .student-card img {
-    width: 7rem;
-    padding-bottom: 1.5rem;
-  }
-  .student-card button {
-    width: 13rem;
-    height: 4rem;
-    background-color: white;
-    border: 1px solid #369afe;
-    border-radius: 11px;
-  }
-  .student-card svg {
-    position: absolute;
-    top: 1.4rem;
-    right: 1.4rem;
-  }
-  .student-name {
-    font-size: 1.8rem;
-    font-weight: 400;
-    line-height: 2.8rem;
-    letter-spacing: 0.1rem;
-  }
-  .student-email {
-    padding-bottom: 1.5rem;
   }
 `;
 

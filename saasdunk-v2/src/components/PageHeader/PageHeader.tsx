@@ -1,24 +1,16 @@
-import { Avatar, Dropdown, Input, MenuProps } from "antd";
+import { Dropdown, Input, MenuProps } from "antd";
 import PageHeaderStyle from "./PageHeader.style";
-import { BellOutlined, DownOutlined, UserOutlined } from "@ant-design/icons";
 import { images } from "../../config/images";
 
 const PageHeader = () => {
   const items: MenuProps["items"] = [
     {
-      label: <a href="https://www.antgroup.com">1st menu item</a>,
+      label: "My Profile",
       key: "0",
     },
     {
-      label: <a href="https://www.aliyun.com">2nd menu item</a>,
+      label: "View Profile",
       key: "1",
-    },
-    {
-      type: "divider",
-    },
-    {
-      label: "3rd menu item",
-      key: "3",
     },
   ];
   return (
